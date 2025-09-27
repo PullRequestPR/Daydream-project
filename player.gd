@@ -9,7 +9,7 @@ const GRAVITY = 900
 const MAX_JUMPS = 1
 
 
-var jump_count = 0
+var jump_count = 1
 
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
