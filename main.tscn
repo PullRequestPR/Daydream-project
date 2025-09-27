@@ -327,7 +327,9 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_left_margin = 0.9
+drag_top_margin = 0.4
 drag_right_margin = 0.0
+drag_bottom_margin = 0.4
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lquwl")
@@ -338,6 +340,6 @@ layer_0/tile_data = PackedInt32Array(1310720, 196608, 1, 1376256, 196608, 2, 131
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 z_index = -1
-position = Vector2(687, -170)
-scale = Vector2(1.4302083, 1)
+position = Vector2(1421, 0)
+scale = Vector2(2.4952483, 2.6265435)
 texture = ExtResource("4_1bvp3")
