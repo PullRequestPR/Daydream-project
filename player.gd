@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var sfx_jump: AudioStreamPlayer = $sfx_jump
+
+
 const SPEED = 300
 const JUMP_FORCE = -400
 const GRAVITY = 900
@@ -21,6 +24,7 @@ func _physics_process(delta):
 	if (Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("jump")) and jump_count < MAX_JUMPS:
 		velocity.y = JUMP_FORCE
 		jump_count += 1
+		$sfx_jump.play()
 
 	if is_on_floor():
 		jump_count = 0
