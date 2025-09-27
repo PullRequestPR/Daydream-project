@@ -302,6 +302,7 @@ physics_layer_0/collision_mask = 255
 sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
 [node name="Main" type="Node2D"]
+position = Vector2(-705, 0)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0xm2m")
@@ -318,7 +319,15 @@ position = Vector2(221, 224)
 scale = Vector2(4.5625005, 4.749999)
 texture = ExtResource("2_h2yge")
 
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_left_margin = 0.9
+drag_right_margin = 0.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lquwl")
@@ -329,6 +338,6 @@ layer_0/tile_data = PackedInt32Array(1310720, 196608, 1, 1376256, 196608, 2, 131
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 z_index = -1
-position = Vector2(502.5, -170)
-scale = Vector2(1.2380208, 1)
+position = Vector2(687, -170)
+scale = Vector2(1.4302083, 1)
 texture = ExtResource("4_1bvp3")
