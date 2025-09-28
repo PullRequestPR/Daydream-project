@@ -16,11 +16,11 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("ui_right") or Input.is_action_pressed("move_right"):
 		velocity.x = SPEED
-		anim_sprite.play("walking")
+		#anim_sprite.play("walking")
 	elif Input.is_action_pressed("ui_left") or Input.is_action_pressed("move_left"):
 		velocity.x = -SPEED
-		
-		anim_sprite.play("walking reverse")
+		#
+		#anim_sprite.play("walking reverse")
 	else:
 		velocity.x = 0
 		anim_sprite.play("idle")
@@ -28,6 +28,15 @@ func _physics_process(delta):
 		velocity.y = JUMP_FORCE
 		jump_count += 1
 		$sfx_jump.play()
+	
+	if velocity.x == 0:
+		anim_sprite.play("idle")
+	elif velocity.x <= 1:
+		anim_sprite.play("walking")
+		anim_sprite.flip_h = true
+	else:
+		anim_sprite.play("walking")
+		anim_sprite.flip_h = false
 
 	if is_on_floor():
 		jump_count = 0

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dndxvknypesbm"]
+
+[ext_resource type="Script" uid="uid://bmkrm4vcismpm" path="res://start_button.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://cmc113xeq3a22" path="res://Welcome To Pyramid Run.png" id="2_7vrkn"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 286.0
+offset_right = 718.0
+offset_bottom = 373.0
+text = "Start Game"
+script = ExtResource("1_7vrkn")
+
+[node name="WelcomeToPyramidRun" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(582.125, 325.5)
+scale = Vector2(0.60403645, 0.6046296)
+texture = ExtResource("2_7vrkn")
+
+[connection signal="pressed" from="Start Button" to="Start Button" method="_on_pressed"]
