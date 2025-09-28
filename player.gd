@@ -42,3 +42,7 @@ func _physics_process(delta):
 		jump_count = 0
 
 	move_and_slide()
+
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://U win.tscn")

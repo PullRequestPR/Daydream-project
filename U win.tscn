@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5y22wd6fgbgx"]
+
+[ext_resource type="Script" uid="uid://7hw4sccd0w0s" path="res://button.gd" id="1_dp861"]
+[ext_resource type="Texture2D" uid="uid://dtkh7lvm7nmoe" path="res://Welcome To Pyramid Run (1).png" id="2_cvemi"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 277.0
+offset_right = 794.0
+offset_bottom = 359.0
+text = "Restart"
+script = ExtResource("1_dp861")
+
+[node name="WelcomeToPyramidRun(1)" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(660.99994, 315)
+scale = Vector2(0.603125, 0.61157405)
+texture = ExtResource("2_cvemi")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
